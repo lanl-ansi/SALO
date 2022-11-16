@@ -195,12 +195,12 @@ Runs the SALO algorithm on the time series `Xs`, with candidate sources' indices
 
 **OUTPUT (written in folder ./data/ for the parallel version)**:\
 `Ls_l0`: values of the objective function for the various values of k and l, for the SALO algorithm.\
-`(L, A, d, γ, k, l)`: estimated system's paramters from SALO.\
-- `L`: Minimal value of the objective.\
-- `A`: Estimate of the dynamics matrix.\
-- `d`: Estimate of the dampings.\
-- `γ`: Estimate of the forcing amplitude.\
-- `k`: Estimate frequency index (see theory).\
+`(L, A, d, γ, k, l)`: estimated system's paramters from SALO.
+- `L`: Minimal value of the objective.
+- `A`: Estimate of the dynamics matrix.
+- `d`: Estimate of the dampings.
+- `γ`: Estimate of the forcing amplitude.
+- `k`: Estimate frequency index (see theory).
 - `l`: Estimate of the forcing location.
 
 ---
@@ -225,12 +225,12 @@ Runs the SALO-relax algorithm on the time series `Xs`, with forcing's candidate 
 
 **OUTPUT (written in folder ./data/ for the parallel version)**:\
 `Ls_l1`: values of the objective function for the various values of k, for the SALO-relax algorithm.\
-`(L, A, d, γ, k, l)`: estimated system's paramters from SALO-relaxed.\
- - `L`: Minimal value of the objective.\
- - `A`: Estimate of the dynamics matrix.\
- - `d`: Estimate of the damings.\
- - `γ`: Estimate of the forcing amplitude.\
- - `l`: Estimate of the forcing location.\
+`(L, A, d, γ, k, l)`: estimated system's paramters from SALO-relaxed.
+ - `L`: Minimal value of the objective.
+ - `A`: Estimate of the dynamics matrix.
+ - `d`: Estimate of the dampings.
+ - `γ`: Estimate of the forcing amplitude.
+ - `l`: Estimate of the forcing location.
  - `k`: Estimate frequency index (see theory).
 
 
