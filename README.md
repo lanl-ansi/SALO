@@ -46,7 +46,7 @@ The code has been developped on Julia 1.6 and should work on any subsequent vers
 
 Minimizes the quadratic error in the estimation of the forced trajectory, for a fixed frequency (k) and location (l) of the forcing. The optimization parameters are the dynamics matrix (A1), the damings (a2), and the forcing amplitude (γ). 
 
-**INPUT**:\\
+**INPUT**:\
 (`ntw`: For `Lmax_SALO_par` only. Name of the system under investigation, for data labelling purpose.)\
 `x`: Time series of the phase angles.\
 `Dx`: Time series of the phase frequencies. \
@@ -57,8 +57,8 @@ Minimizes the quadratic error in the estimation of the forced trajectory, for a 
 `A1h`: Warm start for A1.\
 `a2h`: Warm start for a2.\
 `b`: Regularization parameter to avoid overfitting.\
-`μ`: Initial value of the barrier parameter (in IPOPT).\
-`bp`: Initial value of the bound_push parameter (in IPOPT).
+`μ`: Initial value of the barrier parameter (in Ipopt).\
+`bp`: Initial value of the bound_push parameter (in Ipopt).
 
 
 **OUTPUT**:\
@@ -80,7 +80,7 @@ Minimizes the quadratic error in the estimation of the forced trajectory, for a 
 Minimizes the quadratic error in the estimation of the forced trajectory, for a fixed frequency (k) of the forcing. The optimization parameters are the dynamics matrix (A1), the damings (a2), and the forcing amplitude (γ). 
 
 
-**INPUT**:
+**INPUT**:\
 (`ntw`: For `Lmax_SALOrelax_par` only. Name of the system under investigation, for data labelling purpose.)\
 `x`: Time series of the phase angles.\
 `Dx`: Time series of the phase frequencies.\
@@ -90,8 +90,8 @@ Minimizes the quadratic error in the estimation of the forced trajectory, for a 
 `A1h`: Warm start for A1.\
 `a2h`: Warm starrt for a2.\
 `b`: Regularizaion parameter to avoid overfitting.\
-`μ`: Initial value of the barrier parameter (in IPOPT).\
-`bp`: Initial value of the bound_push parameter (in IPOPT).
+`μ`: Initial value of the barrier parameter (in Ipopt).\
+`bp`: Initial value of the bound_push parameter (in Ipopt).
 
 
 **OUTPUT**:\
@@ -160,7 +160,7 @@ Plots the value of the estimated forcing amplitude vs. the agent index, obtained
 
 - `run_example_ntw20()`
 
-Runs the SALO and SALO-relax algorithms on a 20-node system. All data supporting the examples can be found in the folder `example\_data`.
+Runs the SALO and SALO-relax algorithms on a 20-node system. All data supporting the examples can be found in the folder `example_data`.
 
 
 ---
@@ -170,7 +170,7 @@ Runs the SALO and SALO-relax algorithms on a 20-node system. All data supporting
 
 - `run_example_ntw3()`
 
-Runs the SALO and SALO-relax algorithms on a 3-node system. All data supporting the examples can be found in the folder `example\_data`.
+Runs the SALO and SALO-relax algorithms on a 3-node system. All data supporting the examples can be found in the folder `example_data`.
 
 ---
 
@@ -190,18 +190,18 @@ Runs the SALO algorithm on the time series `Xs`, with candidate sources' indices
 `ks`: Values of k to be tried.\
 `plot`: For the non-parallel version only. If true, generates the plots of the objective function vs. frequency.\
 `b`: Regularization parameter to avoid overfitting.\
-`μ`: Initial value of the barrier parameter (in IPOPT).\
-`bp`: Initial value of the bound_push parameter (in IPOPT).
+`μ`: Initial value of the barrier parameter (in Ipopt).\
+`bp`: Initial value of the bound_push parameter (in Ipopt).
 
 **OUTPUT (written in folder ./data/ for the parallel version)**:\
 `Ls_l0`: values of the objective function for the various values of k and l, for the SALO algorithm.\
-`(L_l0, A_l0, d_l0, γ_l0, k_l0, l_l0)`: results under l0.\
-        `L_l0`: Minimal value of the objective.\
-        `A_l0`: Estimate of the dynamics matrix.\
-        `d_l0`: Estimate of the dampings.\
-        `γ_l0`: Estimate of the forcing amplitude.\
-        `k_l0`: Estimate frequency index (see theory).\
-        `l_l0`: Estimate of the forcing location.
+`(L, A, d, γ, k, l)`: estimated system's paramters from SALO.\
+- `L`: Minimal value of the objective.\
+- `A`: Estimate of the dynamics matrix.\
+- `d`: Estimate of the dampings.\
+- `γ`: Estimate of the forcing amplitude.\
+- `k`: Estimate frequency index (see theory).\
+- `l`: Estimate of the forcing location.
 
 ---
 
@@ -220,18 +220,18 @@ Runs the SALO-relax algorithm on the time series `Xs`, with forcing's candidate 
 `ks`: Values of k to try.\
 `plot`: For the non-parallel version only. If true, generates the plots of the objective function vs. k.\
 `b`: Regularization parameters to avoid overfitting.\
-`μ`: Initial value of the barrier parameter (in IPOPT).\
-`bp`: Initial value of the bound\_push parameter (in IPOPT).
+`μ`: Initial value of the barrier parameter (in Ipopt).\
+`bp`: Initial value of the bound\_push parameter (in Ipopt).
 
 **OUTPUT (written in folder ./data/ for the parallel version)**:\
-`Ls_l1`: values of the objective function for the various values of k and l, under l1.\
-`(L_l1, A_l1, d_l1, γ_l1, k_l1, l_l1)`: results under l1.\
-        `L_l1`: Minimal value of the objective.\
-        `A_l1`: Estimate of the dynamics matrix.\
-        `d_l1`: Estimate of the damings.\
-        `γ_l1`: Estimate of the forcing amplitude.\
-        `l_l1`: Estimate of the forcing location.\
-        `k_l1`: Estimate frequency index (see theory).
+`Ls_l1`: values of the objective function for the various values of k, for the SALO-relax algorithm.\
+`(L, A, d, γ, k, l)`: estimated system's paramters from SALO-relaxed.\
+ - `L`: Minimal value of the objective.\
+ - `A`: Estimate of the dynamics matrix.\
+ - `d`: Estimate of the damings.\
+ - `γ`: Estimate of the forcing amplitude.\
+ - `l`: Estimate of the forcing location.\
+ - `k`: Estimate frequency index (see theory).
 
 
 ---
