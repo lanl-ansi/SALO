@@ -47,7 +47,7 @@ The code has been developped on Julia 1.6 and should work on any subsequent vers
 Minimizes the quadratic error in the estimation of the forced trajectory, for a fixed frequency (k) and location (l) of the forcing. The optimization parameters are the dynamics matrix (A1), the damings (a2), and the forcing amplitude (γ). 
 
 **INPUT**:\
-(`ntw`: For `Lmax_SALO_par` only. Name of the system under investigation, for data labelling purpose.)\
+(`id`: For the parallel version only. Name of the system under investigation, for data labelling purpose.)\
 `x`: Time series of the phase angles.\
 `Dx`: Time series of the phase frequencies. \
 `xt`: (Inverse) Fourier transform of x.\
@@ -81,7 +81,7 @@ Minimizes the quadratic error in the estimation of the forced trajectory, for a 
 
 
 **INPUT**:\
-(`ntw`: For `Lmax_SALOrelax_par` only. Name of the system under investigation, for data labelling purpose.)\
+(`id`: For the parallel version only. Name of the system under investigation, for data labelling purpose.)\
 `x`: Time series of the phase angles.\
 `Dx`: Time series of the phase frequencies.\
 `xt`: (Inverse) Fourier transform of x.\
