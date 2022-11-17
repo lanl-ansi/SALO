@@ -209,12 +209,12 @@ Runs the SALO algorithm on the time series `Xs`, with candidate sources' indices
 *./SALO.jl (./SALO\_parallel.jl)*
 
 - `run_SALOrelax(Xs::Matrix{Float64}, τ::Float64, ks::Vector{Int64}, plot::Bool=false, b::Tuple{Float64,Float64}=(0.,0.), μ::Float64=1e-1, bp::Float64=1e-1)`
-- `run_SALOrelax_par(Xs::Matrix{Float64}, τ::Float64, ks::Vector{Int64}, b::Tuple{Float64,Float64}=(0.,0.), μ::Float64=1e-1, bp::Float64=1e-1)`
+- `run_SALOrelax_par(id::String, Xs::Matrix{Float64}, τ::Float64, ks::Vector{Int64}, b::Tuple{Float64,Float64}=(0.,0.), μ::Float64=1e-1, bp::Float64=1e-1)`
 
 Runs the SALO-relax algorithm on the time series `Xs`, with forcing's candidate frequencies indices in `ks`. Returns the Maximum Likelihood for each possible k as well as the identified system parameters corresponding to the largest likelihood.
 
 **INPUT**:\
-(`ntw`: For parallel version only. Name of the system under investigation, for data labelling purpose.)\
+(`id`: For parallel version only. Name of the system under investigation, for data labelling purpose.)\
 `Xs`: Time series of the phase angles (rows 1:n) and of the phase frequencies (rows n+1:2*n).\
 `τ`: Time step size.\
 `ks`: Values of k to try.\

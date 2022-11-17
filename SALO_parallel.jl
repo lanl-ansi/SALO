@@ -176,7 +176,7 @@ end
 
 #=
 """
-	run_SALOrelax_par(Xs::Matrix{Float64}, τ::Float64, ks::Vector{Int64}, b::Tuple{Float64,Float64}=(0.,0.), μ::Float64=1e-1, bp::Float64=1e-1)
+	run_SALOrelax_par(id::String, Xs::Matrix{Float64}, τ::Float64, ks::Vector{Int64}, b::Tuple{Float64,Float64}=(0.,0.), μ::Float64=1e-1, bp::Float64=1e-1)
 
 Parallelized version of "run_SALOrelax".
 
