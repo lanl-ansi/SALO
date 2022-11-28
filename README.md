@@ -233,8 +233,8 @@ Runs the SALO-relax algorithm on the time series `Xs`, with forcing's candidate 
  - `l`: Estimate of the forcing location.
  - `k`: Estimate frequency index (see theory).
 
-
----
+## License
+This code is provided under a BSD license as part of the Multi-Infrastructure Control and Optimization Toolkit (MICOT) project, LA-CC-13-108.
 
 
 
