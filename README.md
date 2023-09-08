@@ -1,5 +1,8 @@
 # System Agnostic Localization of Oscillations (SALO)
-Implementation of the *System Agnostic Localization of Oscillations (SALO)* algorithm, presented in the manuscript [Delabays, Lokhov, Tyloo, and Vuffray (2022)](https://arxiv.org/abs/2211.16064). 
+Implementation of the *System Agnostic Localization of Oscillations (SALO)* algorithm, presented in the article
+
+[Delabays, Lokhov, Tyloo, and Vuffray, *Locating the source of forced oscillations in transmission power grids*, Physical Review X Energy **2**, 023009 (2023)](https://doi.org/10.1103/PRXEnergy.2.023009). 
+
 The SALO algorithm identifies the source and frequency of a forced oscillation in a complex network of coupled dynamical agents, based on the position and velocity time series of each agent. 
 
 
